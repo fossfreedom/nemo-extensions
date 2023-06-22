@@ -5,9 +5,9 @@
 from setuptools import setup
 
 # Setup stage
-setup(
+setup( packages=[],
     name         = "nemo-media-columns",
-    version      = "5.2.0",
+    version      = "5.8.0",
     description  = "Column provider for nemo to show additional metadata for media and image files",
     author       = "Linux Mint",
     author_email = "root@linuxmint.com",

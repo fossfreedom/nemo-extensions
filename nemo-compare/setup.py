@@ -5,9 +5,9 @@
 from setuptools import setup
 
 # Setup stage
-setup(
+setup( packages=[],
     name         = "nemo-compare",
-    version      = "5.2.1",
+    version      = "5.8.0",
     description  = "Context menu comparison extension for Nemo file manager",
     author       = "Linux Mint",
     author_email = "root@linuxmint.com",

@@ -134,7 +134,7 @@ add_callback (NemoMenuItem *item,
 	for (scan = files; scan; scan = scan->next) {
 		NemoFileInfo *file = scan->data;
 
-		uri = nemo_file_info_get_uri (file);
+		uri = nemo_file_info_get_activation_uri (file);
 		quoted_uri = g_shell_quote (uri);
 		g_string_append_printf (cmd, " %s", quoted_uri);
 		g_free (uri);
@@ -394,8 +394,9 @@ static GList *
 nemo_fr_get_name_and_desc (NemoNameAndDescProvider *provider)
 {
     GList *ret = NULL;
-
-    ret = g_list_append (ret, ("Nemo Fileroller:::Allows managing of archives from the context menu"));
+    gchar *string = g_strdup_printf ("Nemo Fileroller:::%s",
+      _("Allows managing of archives from the context menu"));
+    ret = g_list_append (ret, (string));
 
     return ret;
 }
